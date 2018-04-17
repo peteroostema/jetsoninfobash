@@ -98,6 +98,7 @@ saveString=$saveString${gpuSep[1]}
 IFS=""
 
 echo "$(ps -ef | awk '/tegrastats/{print $2}')"
-echo $saveString > sysInfo.txt
+hostname="$(cat /etc/hostname)"
+echo $saveString > /home2/peter/Documents/sysInfo/sysInfo$hostname.txt
 #sleep 10
 #done
